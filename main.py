@@ -8,7 +8,7 @@ user_option = user_option.lower()
 if not user_option in options:
     print('Opcion invalida, imbecil, deja de jugar conmigo!')
 else:
-    print('Buena suerte ,_,')
+    print('Buena suerte ,_,  ')
 
 
 computer_option = random.choice(options)
