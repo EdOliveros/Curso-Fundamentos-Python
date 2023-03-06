@@ -1,34 +1,20 @@
 import random
 
+options = ('piedra', 'papel', 'tijera')
+
 user_option = input("piedra, papel o tijera? => ")
 user_option = user_option.lower()
 
-computer_option = 'tijera'
+if not user_option in options:
+    print('Opcion invalida, imbecil, deja de jugar conmigo!')
+else:
+    print('Buena suerte ,_,')
 
 
-numero = random.randint(1, 3)
-
-if numero == 1:
-    computer_option = 'piedra'
-elif numero == 2:
-    computer_option = 'tijera'
-elif numero == 3:
-    computer_option = 'papel'
+computer_option = random.choice(options)
 
 print("Computer is => ", computer_option)
-
-''' 
-if computer_option == user_option:
-    print('Empate!')
-elif computer_option == 'piedra' and user_option == 'papel':
-    print('Ganaste!')
-elif computer_option == 'tijera' and user_option == 'piedra':
-    print('Ganaste!')
-elif computer_option == 'papel' and user_option == 'tijera':
-    print('Ganaste!')
-else: 
-    print('Perdiste!!')
-'''
+print("User is => ", user_option)
 
 if computer_option == user_option:
     print('Empate!')
@@ -53,3 +39,28 @@ elif user_option == 'tijera':
     else:
         print('Piedra gana a Tijera')
         print('Computer gano!')
+
+'''
+numero = random.randint(1, 3)
+
+if numero == 1:
+    computer_option = 'piedra'
+elif numero == 2:
+    computer_option = 'tijera'
+elif numero == 3:
+    computer_option = 'papel'
+'''
+
+''' 
+if computer_option == user_option:
+    print('Empate!')
+elif computer_option == 'piedra' and user_option == 'papel':
+    print('Ganaste!')
+elif computer_option == 'tijera' and user_option == 'piedra':
+    print('Ganaste!')
+elif computer_option == 'papel' and user_option == 'tijera':
+    print('Ganaste!')
+else: 
+    print('Perdiste!!')
+'''
+
